@@ -4,8 +4,6 @@ import userEvent from '@testing-library/user-event';
 import App from '../App';
 import renderWithRouter from './utils/renderWithRouter';
 
-// test('', () => {});
-
 describe('#Pokemon', () => {
   test('Se é renderizado um card com as informações de determinado pokémon', () => {
     renderWithRouter(<App />);
