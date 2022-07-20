@@ -3,7 +3,7 @@ import { screen } from '@testing-library/react';
 import App from '../App';
 import renderWithRouter from './utils/renderWithRouter';
 
-describe('#Favorite Pokémons', () => {
+describe('#NotFound', () => {
   test('Se a página contém um heading h2 com o texto Page requested not found 😭', () => {
     const { history } = renderWithRouter(<App />);
 
@@ -12,7 +12,8 @@ describe('#Favorite Pokémons', () => {
     const notfound = screen.getByRole('heading', { name: /Page requested not found/i });
     expect(notfound).toBeInTheDocument();
   });
-  test('se a página mostra a imagem https://media.giphy.com/media/kNSeTs31XBZ3G/giphy.gif', () => {
+
+  test('Se a página mostra a imagem https://media.giphy.com/media/kNSeTs31XBZ3G/giphy.gif', () => {
     const { history } = renderWithRouter(<App />);
 
     history.push('/pagina/que-nao-existe');
